@@ -1,0 +1,13 @@
+C:\Users\jhpj_\Documents\Projetos VS2019\Lista de Exercicios\Lista de Exercicios\bin\Debug\netcoreapp3.1\Lista de Exercicios.exe
+C:\Users\jhpj_\Documents\Projetos VS2019\Lista de Exercicios\Lista de Exercicios\bin\Debug\netcoreapp3.1\Lista de Exercicios.deps.json
+C:\Users\jhpj_\Documents\Projetos VS2019\Lista de Exercicios\Lista de Exercicios\bin\Debug\netcoreapp3.1\Lista de Exercicios.runtimeconfig.json
+C:\Users\jhpj_\Documents\Projetos VS2019\Lista de Exercicios\Lista de Exercicios\bin\Debug\netcoreapp3.1\Lista de Exercicios.runtimeconfig.dev.json
+C:\Users\jhpj_\Documents\Projetos VS2019\Lista de Exercicios\Lista de Exercicios\bin\Debug\netcoreapp3.1\Lista de Exercicios.dll
+C:\Users\jhpj_\Documents\Projetos VS2019\Lista de Exercicios\Lista de Exercicios\bin\Debug\netcoreapp3.1\Lista de Exercicios.pdb
+C:\Users\jhpj_\Documents\Projetos VS2019\Lista de Exercicios\Lista de Exercicios\obj\Debug\netcoreapp3.1\Lista de Exercicios.csprojAssemblyReference.cache
+C:\Users\jhpj_\Documents\Projetos VS2019\Lista de Exercicios\Lista de Exercicios\obj\Debug\netcoreapp3.1\Lista de Exercicios.AssemblyInfoInputs.cache
+C:\Users\jhpj_\Documents\Projetos VS2019\Lista de Exercicios\Lista de Exercicios\obj\Debug\netcoreapp3.1\Lista de Exercicios.AssemblyInfo.cs
+C:\Users\jhpj_\Documents\Projetos VS2019\Lista de Exercicios\Lista de Exercicios\obj\Debug\netcoreapp3.1\Lista de Exercicios.csproj.CoreCompileInputs.cache
+C:\Users\jhpj_\Documents\Projetos VS2019\Lista de Exercicios\Lista de Exercicios\obj\Debug\netcoreapp3.1\Lista de Exercicios.dll
+C:\Users\jhpj_\Documents\Projetos VS2019\Lista de Exercicios\Lista de Exercicios\obj\Debug\netcoreapp3.1\Lista de Exercicios.pdb
+C:\Users\jhpj_\Documents\Projetos VS2019\Lista de Exercicios\Lista de Exercicios\obj\Debug\netcoreapp3.1\Lista de Exercicios.genruntimeconfig.cache
