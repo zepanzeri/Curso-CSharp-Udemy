@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Lista_de_Exercicios.Entities;
+using Lista_de_Exercicios.Entities.Enums;
 
 namespace Lista_de_Exercicios
 {
@@ -197,7 +199,95 @@ namespace Lista_de_Exercicios
                 Console.WriteLine(e);
             */
 
-        }
+            /* Enums
+            Order order = new Order
+            {
+                Id = 1080,
+                Moment = DateTime.Now,
+                Status = OrderStatus.PendingPayment
+            };
 
+            Console.WriteLine(order);
+            string txt = OrderStatus.PendingPayment.ToString();
+            Console.WriteLine(txt);
+            OrderStatus os = Enum.Parse<OrderStatus>("Delivered");
+            Console.WriteLine(os);
+            */
+
+            /* Exercicio Enums e Compositions
+            Console.WriteLine("Digite o nome do Departamento");
+            string dptName = Console.ReadLine();
+            Console.WriteLine("Coloque os dados do Funcionario");
+            Console.WriteLine("Nome:");
+            string name = Console.ReadLine();
+            Console.WriteLine("Informe o level do Funcionario");
+            WorkerLevel level = Enum.Parse<WorkerLevel>(Console.ReadLine());
+            Console.WriteLine("Informe o salario base");
+            double baseSalary = double.Parse(Console.ReadLine());
+
+            Department dept = new Department(dptName);
+            Worker worker = new Worker(name, level, baseSalary,dept);
+
+            Console.WriteLine("Quantos contratos para este funcionario?");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine($"Dados do contrato #{i+1}");
+                Console.WriteLine("Data: (dd/MM/yyyy)");
+                DateTime date = DateTime.Parse(Console.ReadLine());
+                Console.WriteLine("Valor por hora");
+                double valueHour = double.Parse(Console.ReadLine());
+                Console.WriteLine("Horas:");
+                int hours = int.Parse(Console.ReadLine());
+                HourContract contract = new HourContract(date, valueHour, hours);
+                worker.AddContract(contract);
+            }
+
+            Console.WriteLine("Informe o mes e ano para calculo dos ganhos (MM/yyyy):");
+            string monthAndYear = Console.ReadLine();
+            int month = int.Parse(monthAndYear.Substring(0, 2));
+            int year = int.Parse(monthAndYear.Substring(3));
+            Console.WriteLine("Nome: " + worker.Name);
+            Console.WriteLine("Departameno: " + worker.Department.Name);
+            Console.WriteLine($"Rendimentos para {monthAndYear}: {worker.Income(year,month).ToString("F2")}");
+            */
+
+            /* Exercicio Enums e Compositions #2
+            Console.WriteLine("Dados do cliente:");
+            Console.WriteLine("Nome:");
+            string name = Console.ReadLine();
+            Console.WriteLine("Email:");
+            string email = Console.ReadLine();
+            Console.WriteLine("Nascimento:");
+            DateTime birth = DateTime.Parse(Console.ReadLine());           
+            Console.WriteLine();
+            Console.WriteLine("Dados do Pedido:");
+            Console.WriteLine("Status:");
+            OrderStatusNew status = Enum.Parse<OrderStatusNew>(Console.ReadLine());
+
+            Client client = new Client(name, email, birth);
+            OrderNew order = new OrderNew(DateTime.Now, status, client);
+
+            Console.WriteLine("Quantidade de itens:");
+            int itemQty = int.Parse(Console.ReadLine());
+            for(int i = 0; i < itemQty; i++)
+            {
+                Console.WriteLine($"Dados do item #{i+1}:");
+                Console.WriteLine("Nome do produto:");
+                string productName = Console.ReadLine();
+                Console.WriteLine("Preço:");
+                double productPrice = double.Parse(Console.ReadLine());
+                Console.WriteLine("Quantidade:");
+                int productQty = int.Parse(Console.ReadLine());
+                Product product = new Product(productName, productPrice);
+                OrderItem orderItem = new OrderItem(productQty, productPrice, product);
+                order.AddItem(orderItem);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Resumo do Pedido:");
+            Console.WriteLine(order);
+            */
+        }
     }
 }
