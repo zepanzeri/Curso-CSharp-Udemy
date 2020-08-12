@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Lista_de_Exercicios.Entities;
+using Lista_de_Exercicios.Metodos_abstratos;
+//using Lista_de_Exercicios.Entities;
 using Lista_de_Exercicios.Entities.Enums;
+using Lista_de_Exercicios.Herança_e_Polimorfismo;
 
 namespace Lista_de_Exercicios
 {
@@ -288,6 +290,77 @@ namespace Lista_de_Exercicios
             Console.WriteLine("Resumo do Pedido:");
             Console.WriteLine(order);
             */
+
+            /* Exercicio Polimorfismo e Herança
+            Console.WriteLine("Enter the number of products:");
+            int qty = int.Parse(Console.ReadLine());
+            List<Product> product = new List<Product>();
+            for(int i = 0; i < qty; i++)
+            {
+                Console.WriteLine($"Data of product #{i+1}");
+                Console.WriteLine("Common, Used or Imported (C / U / I) ?");
+                char type = Char.Parse(Console.ReadLine());
+                Console.WriteLine("Enter the product name:");
+                string name = Console.ReadLine();
+                Console.WriteLine("Enter the product price:");
+                double price = Double.Parse(Console.ReadLine());
+                if (type == 'c' || type == 'C')
+                    product.Add(new Product(name, price));
+                else if (type == 'u' || type == 'U')
+                {
+                    Console.WriteLine("Enter the manufacture date DD/MM/YYYY:");
+                    DateTime date = DateTime.Parse(Console.ReadLine());
+                    product.Add(new UsedProduct(name, price, date));
+                }
+                else if (type == 'i' || type == 'I')
+                {
+                    Console.WriteLine("Enter the customs fee:");
+                    double fee = double.Parse(Console.ReadLine());
+                    product.Add(new ImportedProduct(name, price, fee));
+                }
+            }
+
+            foreach(Product p in product)
+                Console.WriteLine(p.PriceTag());
+            */
+            List<Pessoa> pagadores = new List<Pessoa>();
+            double soma = 0;
+            Console.WriteLine("Informe o numero de pagadores");
+            int numero = int.Parse(Console.ReadLine());
+            for(int i = 0; i < numero; i++)
+            {
+                Console.WriteLine($"Dados do pagador:{i+1}");
+                Console.WriteLine();
+                Console.WriteLine("Pessoa Fisica ou Juridica (f/j) ?");
+                char tipo = Char.Parse(Console.ReadLine());
+                Console.WriteLine("Nome");
+                string nome = Console.ReadLine();
+                Console.WriteLine("Renda anual");
+                double renda = Double.Parse(Console.ReadLine());
+                if(tipo == 'f')
+                {
+                    Console.WriteLine("Gastos com saude");
+                    double gasto = double.Parse(Console.ReadLine());
+                    pagadores.Add(new PessoaFisica(nome, renda, gasto));
+                }
+                else
+                {
+                    Console.WriteLine("Numero de funcionarios");
+                    int numeroF = int.Parse(Console.ReadLine());
+                    pagadores.Add(new PessoaJuridica(nome, renda, numeroF));
+                }
+
+            }
+            Console.WriteLine("\n\n");
+            Console.WriteLine("Impostos Pagos");
+            foreach(Pessoa p in pagadores)
+            {
+                double imposto = p.Imposto();
+                Console.WriteLine(p.Nome + " R$ " + imposto.ToString("F2"));
+                soma += imposto;
+            }
+
+            Console.Write("Total em Impostos: R$ " + soma.ToString("F2"));
         }
     }
 }
